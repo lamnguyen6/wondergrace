@@ -1,0 +1,84 @@
+$prefixFullOpt: 'webkit' 'moz' 'ms';
+
+@mixin prefix($declarations, $prefixes: ()) {
+    @each $property, $value in $declarations {
+        @each $prefix in $prefixes {
+            #{'-' + $prefix + '-' + $property}: $value;
+        }
+        // Output standard non-prefixed declaration
+        #{$property}: $value;
+    }
+}
+
+@mixin box-shadow($args...) {
+    @include prefix((
+        box-shadow: $args
+    ), $prefixFullOpt);
+}
+
+@mixin transform($args) {
+    @include prefix((
+        transform: $args
+    ), $prefixFullOpt);
+}
+
+@mixin transform-origin($args) {
+    @include prefix((
+        transform-origin: $args
+    ), $prefixFullOpt);
+}
+
+@mixin transition($args) {
+    @include prefix((
+        transition: $args
+    ), $prefixFullOpt);
+}
+
+@mixin border-radius($rad) {
+    @include prefix((
+        border-radius: $rad
+    ), $prefixFullOpt);
+}
+
+@mixin animation($args...) {
+    @include prefix((
+        animation: $args
+    ), $prefixFullOpt);
+}
+
+@mixin --flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin --flexA($al) {
+    -webkit-align-items: $al;
+    -moz-align-items: $al;
+    align-items: $al;
+}
+
+@mixin --flexJ($jus) {
+    -webkit-justify-content: $jus;
+    -moz-justify-content: $jus;
+    justify-content: $jus;
+}
+
+@mixin --flexWrap($wrap) {
+    -webkit-flex-wrap: $wrap;
+    -moz-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin --flexDirection($dir) {
+    -webkit-flex-direction: $dir;
+    -moz-flex-direction: $dir;
+    flex-direction: $dir;
+}
+
+@mixin flexAJ($al, $jus) {
+    @include --flex();
+    @include --flexA($al);
+    @include --flexJ($jus);
+}

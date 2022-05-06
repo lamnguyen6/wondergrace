@@ -1,0 +1,63 @@
+<div class="header">
+	<div class="header__wrap">
+		<div (click)="humburgerOnClick()" class="humburger" mat-icon-button [matMenuTriggerFor]="menu">
+			<div class="humburger__content">
+				<span></span><span></span><span></span>
+			</div>
+		</div>
+		<mat-menu class="humburger-menu" #menu="matMenu">
+			<button mat-menu-item>
+				<a routerLink="/">Home</a>
+			</button>
+			<button class="sub-item" mat-menu-item>
+				<a href="javascript:void(0)">OpenSea</a>
+			</button>
+			<!-- <button class="sub-item" mat-menu-item>
+				<a href="{{ looksRareUrl }}" target="_blank">LooksRare</a>
+			</button> -->
+			<!-- <button class="sub-item" mat-menu-item>
+				<a>Twitter</a>
+			</button> -->
+			<!-- <button class="sub-item" mat-menu-item>
+				<a>Instagram</a>
+			</button>
+			<button class="sub-item" mat-menu-item>
+				<a>Discord</a>
+			</button> -->
+		</mat-menu>
+		<div class="logo"></div>
+		<ul class="menu router-accesses">
+			<li class="menu__item">home</li>
+			<!-- <li class="menu__item">tub</li>
+			<li class="menu__item">party</li> -->
+		</ul>
+		<ul class="menu router-business">
+			<li class="menu__item">
+				<a href="javascript:void(0)" target="_blank">
+					<img src="/assets/images/icons/opensea.png" alt="">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="https://discord.com/invite/QzxdvdwdYD" target="_blank">
+					<img src="/assets/images/icons/discord.png" alt="">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="https://www.instagram.com/wondergracenft/" target="_blank">
+					<img src="/assets/images/icons/instagram.png" alt="">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="https://www.facebook.com/wondergracenft" target="_blank">
+					<img src="/assets/images/icons/facebook.png" alt="">
+				</a>
+			</li>
+			<li class="menu__item">
+				<a href="https://twitter.com/wondergrace_nft" target="_blank">
+					<img src="/assets/images/icons/twitter.png" alt="">
+				</a>
+			</li>
+		</ul>
+		<div class="sound"></div>
+	</div>
+</div>

@@ -1,0 +1,140 @@
+<div class="duckart">
+	<div class="header">
+		<app-header></app-header>
+	</div>
+	<div class="content">
+		<div class="banner team">
+			<div class="big-banner">
+				<video id="banner" autoplay loop muted playsinline="true" webkit-playsinline="true">
+					<source  src="/assets/images/banner/banner.mp4" type="video/mp4">
+				</video>
+			</div>
+			<h1>about us</h1>
+			<p class="intro">We’re WonderGrace – a close-knit, strong, and friendly community in the NFT world. We have a collection of 3,333 uniquely adorable NFTs (non-fungible tokens) that live on the Ethereum blockchain (ERC-721). No WonderGrace NFT is exactly the same, they have different traits, names, and titles.</p>
+			<ul class="team-members">
+				<li class="member" *ngFor="let member of teamMember">
+					<div class="avatar">
+						<video id="{{ member.id }}" autoplay loop muted playsinline="true" webkit-playsinline="true">
+							<source [src]="member.avatar" type="video/mp4">
+						</video>
+					</div>
+					<div class="name">{{ member.name }}</div>
+					<div class="job">{{ member.job }}</div>
+					<div class="contact">{{ member.contact }}</div>
+				</li>
+			</ul>
+		</div>
+		<div class="vision-n-mission section">
+			<h1>vision and mission</h1>
+			<p>Our goals are to actualize our imagination as well as our talent to bring out the coolness, cuteness to this world and reward our supporters for what we build together.
+				As our brand grows, our holders can expect rewards from our collections and extended products and collectibles like hats, stickers, plushies, and more!
+				And at the moment, the gap between Web3 and the real world is still huge, we will try our best to bridge this gap with our NFTs and metaverse.
+			</p>
+		</div>
+		<!-- <div class="bath-party section">
+			<h1>bath parties</h1>
+			<section>
+				<p>Every once in a while your duck will be invited to a bath party. As great parties go, your duck might come home with a third eye, a rare crown, a regrettable tattoo or a refreshed background.</p>
+				<p>However, your duck might get too high and could lose that special pearl necklace in the bathroom, give their beanie to their crush, or even end up naked.</p>
+				<p>As a responsible duck parent, the decision is yours. Keep your duck at home or take a chance and let them have a little fun.</p>
+			</section>
+			<div class="party-ticket"></div>
+			<button>go party</button>
+		</div> -->
+		<div class="road-map section">
+			<h1>road map</h1>
+			<ul>
+				<li>
+					<div class="phase">phase 1 🧁</div>
+					<div class="phase-content">
+						<p>Come up with ideas for WonderGrace NFT with more than 100 unique traits.</p>
+						<p>Build our brand globally.</p>
+						<p>Sell 3333 WonderGrace NFTs.</p>
+					</div>
+				</li>
+				<li>
+					<div class="phase">phase 2 🍰</div>
+					<div class="phase-content">
+						<p>Produce other products and collectibles like hats, stickers, plushies, and more. (WonderGrace NFT holders will get a share of the profits from the sales of our products)</p>
+						<p>Cooperate with famous partners from arts & entertainment to produce exclusive content for holders.</p>
+						<p>Will donate part of its income to relevant non-profit and charitable organizations.</p>
+					</div>
+				</li>
+				<li>
+					<div class="phase">phase 3 🎂</div>
+					<div class="phase-content">
+						<p>Set up a fund to send to charities with allocations decided by holders.</p>
+						<p>Release the first theme song featuring famous artists.</p>
+						<p>Organize meetings and events in the countries with the most holders.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- <div class="faq section">
+			<h1>faq</h1>
+			<ul class="faq-list">
+				<li class="faq-wrap" *ngFor="let item of faq; let i = index;" [class.active]="item.active" (click)="faqOnClick(i)">
+					<p class="question">{{ item.q }}</p>
+					<p class="answer" [innerHTML]="item.a"></p>
+				</li>
+			</ul>
+		</div> -->
+		<!-- <div class="team section">
+			<h1>team</h1>
+			<p>We are 4 frens staying up all night exploring how to combine art, music, game play and community. We are kinda ambitious about building a new type of digital experience. Please send us hate mail when you get bored of us.</p>
+			
+		</div> -->
+		<div class="partnership-n-collabs section">
+			<h1>partnerships & collabs</h1>
+			<p class="note">If you are interested in collaborating with WonderGrace, please email us at <b>info@wondergrace.io</b></p>
+
+			<!-- <div class="form">
+				<p class="form__note"><i>( Fields marked with an asterisk (*) are required )</i></p>
+				<form [formGroup]="myForm" (ngSubmit)="myFormOnSubmit()">
+					<div class="form__item">
+						<label>Name *</label>
+						<input type="text" formControlName="name">
+						<div class="form__item__error" *ngIf="myFormSubmitted && name.errors">
+							<p *ngIf="name.errors.required">Please tell us your name</p>
+						</div>
+					</div>
+					<div class="form__item">
+						<label>Email *</label>
+						<input type="email" formControlName="mail">
+						<div class="form__item__error" *ngIf="myFormSubmitted && mail.errors">
+							<p *ngIf="mail.errors.required">Don't forget your email</p>
+							<p *ngIf="mail.errors.email">Your email is invalid</p>
+						</div>
+					</div>
+					<div class="form__item">
+						<label>Project Name (if applicable)</label>
+						<input type="text" formControlName="project">
+					</div>
+					<div class="form__item">
+						<label>Subject</label>
+						<input type="text" formControlName="subject">
+					</div>
+					<div class="form__item form__item--w100p">
+						<label>Message *</label>
+						<textarea type="text" formControlName="message"></textarea>
+						<div class="form__item__error" *ngIf="myFormSubmitted && message.errors">
+							<p *ngIf="message.errors.required">Please say something</p>
+						</div>
+					</div>
+					<div class="form__item form__item--w100p form__item--submit">
+						<button type="submit">Connect us</button>
+					</div>
+				</form>
+			</div> -->
+		</div>
+		<div class="minting">
+			<video id="mint-banner" autoplay loop muted playsinline="true" webkit-playsinline="true">
+				<source  src="/assets/images/banner/mint-banner.mp4" type="video/mp4">
+			</video>
+			<div class="minting__top-layer">
+				<button #fakeMintBtn id="nftart-min-button-holder" class="connect-wallet-button" (click)="connectWalletOnClick()"></button>
+				<!-- <nftart-mint-button address="0xf85D2c9a9af8a4933e15DE55D878a37050B47967" chain-id="1"> -->
+			</div>
+		</div>
+	</div>
+</div>

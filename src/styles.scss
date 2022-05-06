@@ -1,0 +1,70 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+/* You can add global styles to this file, and also import other style files */
+
+@import '/src/assets/scss/responsive';
+@import '/src/assets/scss/mixin';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    cursor: url('/assets/images/cursor.png'), auto;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: url('/assets/images/cursor.png'), auto;
+}
+
+button {
+    outline: none;
+    cursor: url('/assets/images/cursor.png'), auto;
+}
+
+input, textarea {
+    cursor: url('/assets/images/cursor.png'), auto;
+}
+
+.humburger-menu {
+    padding-top: 20px;
+    .mat-menu-content {
+        padding: 0 !important;
+        background-color: #400000;
+        width: 250px;
+        @include border-radius(8px);
+        border: 2px solid #400000;
+        button {
+            width: 100%;
+            @include border-radius(8px);
+            background-color: #400000;
+            font-size: 18px;
+            a {
+                color: #fffabb !important;
+            }
+            &:hover {
+                background: #fffabb;
+                a {
+                    color: #400000 !important;
+                }
+            }
+            &.sub-item {
+                font-size: 14px;
+            }
+        }
+    }
+}

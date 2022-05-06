@@ -1,0 +1,25 @@
+.custom-cursor {
+    width: 30px;
+    height: 35px;
+
+    background-image: url('/assets/images/cursor.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20000;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+    &.active {
+        animation: cursor-onclick .5s forwards;
+    }
+}
+
+@keyframes cursor-onclick {
+    100% {
+        transform: scale(1.05);
+    }
+}
