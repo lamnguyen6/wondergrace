@@ -1,21 +1,20 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    background-color: #fffabb;
+  background-color: #fffabb;
 }
 
 .nft-art-gen-section button, .nft-art-gen-section select {
-    background:#ff8800 !important;
-    color:#ffffff !important;
-    font-size:19px !important;
-    border-radius:14px !important;
-
-    padding-left:34px !important;
-    padding-right:34px !important;
-    padding-top:19px !important;
-    padding-bottom:19px !important;
-    line-height: 100% !important;
-    height: auto !important;
+  background:#ffc800;
+  color:#ffffff;
+  font-size:23px;
+  border-radius:27px;
+  padding-left:58px;
+  padding-right:58px;
+  padding-top:14px;
+  padding-bottom:14px;
+  line-height: 100%;
+  height: auto;
 }

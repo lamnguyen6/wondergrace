@@ -155,7 +155,7 @@ export class DuckartComponent implements OnInit, AfterViewInit {
 
 		allVids.forEach(vid => {
 			let vidHTML = <HTMLVideoElement>document.getElementById(vid);
-			
+
 			if (vidHTML) {
 				let promise = vidHTML.play();
 				if(promise !== undefined){
@@ -195,7 +195,8 @@ export class DuckartComponent implements OnInit, AfterViewInit {
 		this.myFormSubmitted = true;
 		if (this.myForm.invalid) return;
 	}
-	connectWalletOnClick() {
-		this.router.navigate(['/mint']);
-	}
+  connectWalletOnClick() {
+    this.router.navigate(['/mint']);
+    // window.open(url.toString(), '_blank')
+  }
 }
